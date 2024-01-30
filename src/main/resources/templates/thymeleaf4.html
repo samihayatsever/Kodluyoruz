@@ -1,30 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" >
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
 
-<title>Title</title>
-</head>
-<body class="container">
-<!-- start codes-->
+    <title>Title</title>
+  </head>
+  <body class="container">
+    <!-- start codes-->
     <h1 class="text-center text-primary">thymeleaf html sayfası 4</h1>
     <h2 th:text="'thymeleaf 2'"></h2>
 
-    <hr>
+    <hr />
     <p th:text="${key_model1}"></p>
 
     <form action="">
-        <div class="form-group">
-            <label th:text="#{nameandsurname}" for="name_surname"></label>
-            <input type="text" class="form-control" th:attr="placeholder=#{nameandsurname}" name="name_surname" id="name_surname" autofocus required>
-            <button class="btn btn-primary mt-3">Gönder</button>
-        </div>
+      <div class="form-group">
+        <label th:text="#{nameandsurname}" for="name_surname"></label>
+        <input
+          type="text"
+          class="form-control"
+          th:attr="placeholder=#{nameandsurname}"
+          name="name_surname"
+          id="name_surname"
+          autofocus
+          required
+        />
+        <button class="btn btn-primary mt-3">Gönder</button>
+      </div>
     </form>
 
-<!-- end codes-->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <!-- end codes-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
