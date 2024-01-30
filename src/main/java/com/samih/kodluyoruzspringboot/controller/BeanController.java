@@ -16,7 +16,7 @@ public class BeanController {
 
     // http://localhost:8080/bean/beanDto
     @GetMapping("/bean/beanDto")
-    @ResponseBody  // html olmadan direl ekranda göster
+    @ResponseBody  // html olmadan direk ekranda göster
     public String getBeanDto(){
         return beanConfig.beanDto() + ".";
     }
