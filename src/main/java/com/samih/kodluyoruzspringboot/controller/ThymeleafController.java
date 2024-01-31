@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.samih.kodluyoruzspringboot.dto.ProductDto;
 
@@ -133,6 +134,24 @@ public class ThymeleafController {
 
         model.addAttribute("key_model2", productDto);
         return "/thymeleaf7";
+    }
+
+
+    // RequestParam (pathvariable yapısı ile aynı anda kullanılabilir.)
+    // http://localhost:8080/thymeleaf8?id=4
+    // http://localhost:8080/thymeleaf8?id=4&name=SamiHAYATSEVER
+    @GetMapping("/thymeleaf8")
+    public String getThymeleaf8Model(Model model, 
+                                    @RequestParam(name ="id", required = false, defaultValue = "0") Long id,
+                                    @RequestParam(name ="name") String adi
+    ) {
+        if(id != null){
+            model.addAttribute("key_model1", "id: " + id + " / İsmi: " + adi);
+        }else {
+            model.addAttribute("key_model1", "id girişi yapılmadı.");
+        }
+        
+        return "/thymeleaf8";
     }
 
 }
