@@ -1,4 +1,4 @@
-package com.samih.entity;
+package com.samih.data.entity;
 
 import java.io.Serializable;
 

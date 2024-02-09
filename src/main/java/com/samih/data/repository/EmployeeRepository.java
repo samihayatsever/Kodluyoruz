@@ -1,4 +1,4 @@
-package com.samih.repository;
+package com.samih.data.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
