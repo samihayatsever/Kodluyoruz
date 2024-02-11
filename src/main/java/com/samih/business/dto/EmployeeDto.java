@@ -1,4 +1,4 @@
-package com.samih.dto;
+package com.samih.business.dto;
 //Data Transfer Object
 
 import lombok.AllArgsConstructor;
@@ -12,7 +12,7 @@ import lombok.extern.log4j.Log4j2;
 @NoArgsConstructor
 @Builder
 @Log4j2
-public class EmployeeEntity {
+public class EmployeeDto {
 
     private Long emloyeeId;
     private String firstName;
