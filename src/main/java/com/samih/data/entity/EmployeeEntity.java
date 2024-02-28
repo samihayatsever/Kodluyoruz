@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
@@ -15,6 +16,7 @@ import lombok.extern.log4j.Log4j2;
 @NoArgsConstructor
 @Builder
 @Log4j2
+@EqualsAndHashCode(callSuper = true) // @data uyarısı için eklendi
 
 @Entity
 @Table(name = "employees")

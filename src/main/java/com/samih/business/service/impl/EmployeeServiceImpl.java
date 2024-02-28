@@ -5,8 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.xml.stream.events.EndDocument;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -36,6 +34,11 @@ public class EmployeeServiceImpl implements EmployeeServices{
     private ModelMapper modelMapper;
 
 
+
+    // Dto -> frontend ile etkileşime giren kısım
+    // Repository -> database işe etkileşime giren kısım
+    // Entity -> backend'te kullanılan kısım: sürekli diğer ikisi ile etkileşim halinde ve dönüştürülür halde, çünkü değişiklikleri entity üzerindne yapıyoruz.
+
     // LIST 
     // http://localhost:8080/api/v1/employees
     @GetMapping("/employees")
@@ -44,7 +47,6 @@ public class EmployeeServiceImpl implements EmployeeServices{
         List<EmployeeDto> listDto = new ArrayList<>();
         Iterable<EmployeeEntity> entities = employeeRepository.findAll();
         //Iterable<?> entities = employeeRepository.findAll();
-        
 
         for (EmployeeEntity employeeEntity : entities) { //EmployeeEntity employeeEntity : entities   // Object employeeEntity : entities
             EmployeeDto employeeDto = EntityToDto(employeeEntity);
